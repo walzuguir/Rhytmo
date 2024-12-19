@@ -1,13 +1,13 @@
-# RitmoPro: Calculadora de Pace de Corrida
+# RhythmPro: Calculadora de Pace & Tempo de Corrida
 Este é um projeto desenvolvido para ajudar corredores a calcular o tempo de corrida ou o ritmo com base na distância e no tempo percorrido. A interface é simples e intuitiva, permitindo que os usuários planejem seus treinos e competições de forma eficiente.
 
 ## Objetivo do Projeto
 O objetivo deste projeto é oferecer uma ferramenta prática e acessível para corredores, com funcionalidades que incluem:
 
-Cálculo de pace (tempo por quilômetro)
-Cálculo de tempo total de corrida
+**Cálculo de pace (tempo por quilômetro)**
+**Cálculo de tempo total de corrida**
 Interface intuitiva com campos de entrada organizados para horas, minutos e segundos
-Tecnologias Utilizadas
+
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 **HTML5:** Para a estruturação do conteúdo e criação da calculadora.
