@@ -1,46 +1,61 @@
-RitmoPro: Calculadora de Pace de Corrida
-RitmoPro é uma calculadora de pace que permite aos corredores calcular o tempo de corrida ou o ritmo com base na distância e no tempo. Com uma interface simples e intuitiva, o objetivo é ajudar corredores a planejarem seus treinos e competições.
+# RitmoPro: Calculadora de Pace de Corrida
+Este é um projeto desenvolvido para ajudar corredores a calcular o tempo de corrida ou o ritmo com base na distância e no tempo percorrido. A interface é simples e intuitiva, permitindo que os usuários planejem seus treinos e competições de forma eficiente.
 
-Funcionalidades
-Calcular Pace: Informe o tempo de corrida (em horas, minutos e segundos) e a distância percorrida para calcular o pace (tempo por km).
-Calcular Tempo: Informe o pace e a distância para calcular o tempo total necessário para completar a corrida.
-Interface Intuitiva: Campos de entrada separados para facilitar a inserção de dados (horas, minutos, segundos).
+## Objetivo do Projeto
+O objetivo deste projeto é oferecer uma ferramenta prática e acessível para corredores, com funcionalidades que incluem:
+
+Cálculo de pace (tempo por quilômetro)
+Cálculo de tempo total de corrida
+Interface intuitiva com campos de entrada organizados para horas, minutos e segundos
 Tecnologias Utilizadas
-HTML: Estrutura do conteúdo da página.
-CSS: Estilos da interface, incluindo design responsivo.
-JavaScript: Lógica para calcular o pace e o tempo.
-Como Usar
-Calcular o Pace:
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Insira o tempo de corrida (em horas, minutos e segundos).
-Informe a distância percorrida.
-Clique em "Calcular Pace" para obter o pace por km.
-Calcular o Tempo:
+**HTML5:** Para a estruturação do conteúdo e criação da calculadora.
+**CSS3:** Para o estilo e a criação de uma interface agradável e responsiva.
+**JavaScript:** Para a lógica de cálculo do pace e do tempo de corrida.
 
-Insira o pace (minutos e segundos por km).
-Informe a distância da corrida.
-Clique em "Calcular Tempo" para saber o tempo total necessário.
-Instalação
-Para rodar o projeto localmente:
+Como Utilizar
+Clone o repositório em sua máquina local:
 
-Clone o repositório:
 bash
-Copiar código
+Copy code
 git clone https://github.com/your-username/ritmopro.git
 Navegue até a pasta do projeto:
-bash
-Copiar código
-cd ritmopro
-Abra o arquivo index.html no seu navegador de preferência para testar a aplicação.
-Contribuições
-Se você deseja contribuir para este projeto, siga os passos abaixo:
 
-Fork este repositório.
-Crie uma branch para sua feature: git checkout -b minha-feature.
-Faça as alterações desejadas.
-Commit suas alterações: git commit -m 'Adiciona nova funcionalidade'.
-Push para a branch: git push origin minha-feature.
+bash
+Copy code
+cd ritmopro
+Abra o arquivo index.html em seu navegador de preferência para acessar a calculadora.
+
+Funcionalidades
+Calcular Pace:
+
+Insira o tempo de corrida (horas, minutos e segundos).
+Informe a distância percorrida.
+Clique em "Calcular Pace" para obter o tempo médio por quilômetro.
+Calcular Tempo:
+
+Insira o pace desejado (minutos e segundos por quilômetro).
+Informe a distância da corrida.
+Clique em "Calcular Tempo" para obter o tempo total necessário.
+
+**Contribuições**
+Se você deseja contribuir para o desenvolvimento do projeto, siga os passos abaixo:
+
+Realize o fork deste repositório.
+Crie uma nova branch para sua funcionalidade:
+bash
+Copy code
+git checkout -b minha-feature
+Faça as alterações desejadas no código.
+Faça o commit das alterações:
+bash
+Copy code
+git commit -m 'Adiciona nova funcionalidade'
+Envie para sua branch:
+bash
+Copy code
+git push origin minha-feature
 Abra um pull request para o repositório principal.
 Licença
-Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para mais detalhes.
-
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
