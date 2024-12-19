@@ -25,11 +25,10 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--background-color);
+    background-color: #f8f8f8; /* Cor de fundo mais suave */
     color: var(--primary-color);
     font-size: var(--font-size);
   }
-  
   /* Responsividade */
   @media (max-width: 768px) {
     body {
@@ -43,10 +42,11 @@
     padding: var(--padding);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    border: 1px solid #ddd; /* Borda suave para o container */
   }
   
   /* Estilo do Título */
-.title {
+  .title {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
@@ -54,7 +54,17 @@
     position: relative;
     pointer-events: none;
     user-select: none;
-  } 
+    text-transform: uppercase; /* Adiciona um toque mais moderno */
+    letter-spacing: 1px; /* Aumenta o espaço entre as letras */
+    transition: all 0.3s ease; /* Suaviza a transição */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+  }
+  
+  .title:hover {
+    color: var(--secondary-color); /* Mudança de cor no hover */
+    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
+  }
+  
   
   .title span {
     color: var(--secondary-color);
@@ -79,7 +89,7 @@
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   label {
@@ -95,20 +105,48 @@
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
   }
+
+  .input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 45%; /* Ajuste conforme necessário */
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 8px 20px; /* Adicionando padding para ter espaço à direita */
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  
+  .input-wrapper .suffix {
+    position: absolute;
+    top: 50%;
+    right: 35px; /* Posição do sufixo à direita */
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 0.9rem;
+  }
   
   /* Botões */
+  .form-group-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
   button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: var(--radius);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Transição suave em todas as mudanças */
   }
   
   button:hover {
     background-color: #002984;
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
   }
   
   .form__button--primary {
@@ -117,13 +155,21 @@
   
   .form__button--primary:hover {
     background-color: #388e3c;
+    transform: scale(1.05);
   }
+  
   
   /* Resultado */
   #result {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-color);
     text-align: center;
+    font-weight: bold;
+    background-color: #f1f1f1; /* Fundo suave para a área de resultados */
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+  
   

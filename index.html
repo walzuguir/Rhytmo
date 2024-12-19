@@ -14,31 +14,37 @@
 
     <!-- Grupo de input para Tempo -->
     <div class="form-group">
-      <label for="hours">Horas:</label>
-      <input type="number" id="hours" placeholder="Ex: 01" min="0">
+      <label for="hours">Horas</label>
+      <input type="number" id="hours" placeholder="01" min="0">
 
-      <label for="minutes">Minutos:</label>
-      <input type="number" id="minutes" placeholder="Ex: 30" min="0" max="59">
+      <label for="minutes">Minutos</label>
+      <input type="number" id="minutes" placeholder="30" min="0" max="59">
 
-      <label for="seconds">Segundos:</label>
-      <input type="number" id="seconds" placeholder="Ex: 00" min="0" max="59">
+      <label for="seconds">Segundos</label>
+      <input type="number" id="seconds" placeholder="00" min="0" max="59">
     </div>
 
     <!-- Grupo de input para Distância -->
     <div class="form-group">
-      <label for="distance">Distância (km):</label>
-      <input type="number" id="distance" placeholder="Ex: 10" min="0">
+      <label for="distance">Distância (km)</label>
+      <input type="number" id="distance" placeholder="10" min="0">
     </div>
 
     <!-- Grupo de input para Pace -->
     <div class="form-group">
-      <label for="pace">Pace:</label>
-      <input type="number" id="paceMinutes" placeholder="Minutos" min="0" max="59">
-      <input type="number" id="paceSeconds" placeholder="Segundos" min="0" max="59">
+      <label for="paceMinutes">Pace</label>
+      <div class="input-wrapper">
+        <input type="number" id="paceMinutes" placeholder="30" min="0" max="59">
+        <span class="suffix">min</span>
+      </div>
+      <div class="input-wrapper">
+        <input type="number" id="paceSeconds" placeholder="00" min="0" max="59">
+        <span class="suffix">seg</span>
+      </div>
     </div>
 
     <!-- Botões de ação -->
-    <div class="form-group">
+    <div class="form-group-buttons">
       <button id="calculatePace">Calcular Pace</button>
       <button id="calculateTime">Calcular Tempo</button>
     </div>
