@@ -7,6 +7,7 @@ O objetivo deste projeto é oferecer uma ferramenta prática e acessível para c
 **Cálculo de pace (tempo por quilômetro)**
 
 **Cálculo de tempo total de corrida**
+
 Interface intuitiva com campos de entrada organizados para horas, minutos e segundos
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
@@ -27,7 +28,7 @@ Insira o pace desejado (minutos e segundos por quilômetro).
 Informe a distância da corrida.
 Clique em "Calcular Tempo" para obter o tempo total necessário.
 
-**Contribuições**
+## **Contribuições**
 Se você deseja contribuir para o desenvolvimento do projeto, siga os passos abaixo:
 
 Realize o fork deste repositório.
