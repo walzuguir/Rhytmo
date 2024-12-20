@@ -36,8 +36,8 @@ function calculatePace() {
   const timeParts = totalTimeInput.value.split(":");
 
   // Verifica se algum valor de tempo está vazio atualizado v1.2
-  if (timeParts.length < 3 || timeParts.some((part) => part === "")) {
-    alert("Por favor, insira um tempo válido no formato HH:MM:SS.");
+  if (timeParts.length < 2 || timeParts.some((part) => part === "")) {
+    alert("Por favor, insira um tempo válido no formato H:MM:SS.");
     return;
   }
 
