@@ -13,7 +13,9 @@ Interface intuitiva com campos de entrada organizados para horas, minutos e segu
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 **HTML5:** Para a estruturação do conteúdo e criação da calculadora.
+
 **CSS3:** Para o estilo e a criação de uma interface agradável e responsiva.
+
 **JavaScript:** Para a lógica de cálculo do pace e do tempo de corrida.
 
 Funcionalidades
