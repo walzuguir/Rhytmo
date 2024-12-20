@@ -7,6 +7,8 @@ Atráves de um formulário onde o usuário preenche com o tempo de corrida e a d
 
 # Tecnologias utilizadas nesse projeto:
 
-CSS;
-Javscript;
-HTML;
+*CSS;*
+
+*Javscript;*
+
+*HTML;*
