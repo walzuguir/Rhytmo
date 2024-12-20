@@ -17,12 +17,12 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 Funcionalidades
 
-##Calcular Pace:
+## Calcular Pace:
 Insira o tempo de corrida (horas, minutos e segundos).
 Informe a distância percorrida.
 Clique em "Calcular Pace" para obter o tempo médio por quilômetro.
 
-##Calcular Tempo:
+## Calcular Tempo:
 Insira o pace desejado (minutos e segundos por quilômetro).
 Informe a distância da corrida.
 Clique em "Calcular Tempo" para obter o tempo total necessário.
@@ -46,5 +46,5 @@ Copy code
 git push origin minha-feature
 Abra um pull request para o repositório principal.
 
-##Licença
+## Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
