@@ -18,8 +18,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 **JavaScript:** Para a lógica de cálculo do pace e do tempo de corrida.
 
-Funcionalidades
-
 ## Calcular Pace:
 Insira o tempo de corrida (horas, minutos e segundos).
 Informe a distância percorrida.
