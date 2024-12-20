@@ -17,27 +17,41 @@
     <div class="form-group">
       <h2>Pace Calc()</h2>
       <label for="totalTime">Tempo (hh:mm:ss)</label>
-      <input type="text" id="totalTime" placeholder="0:00:00" maxlength="8">
+      <div class="input-wrapper">
+        <button class="decrement" onclick="decrementValue('totalTime')">-</button>
+        <input type="text" id="totalTime" placeholder="0:00:00" maxlength="8">
+        <button class="increment" onclick="incrementValue('totalTime')">+</button>
+      </div>
     </div>
 
     <!-- Grupo de input para Distância -->
     <div class="form-group">
       <label for="distance">Distância (km)</label>
-      <input type="number" id="distance" placeholder="10" min="0">
+      <div class="input-wrapper">
+        <button class="decrement" onclick="decrementValue('distance')">-</button>
+        <input type="number" id="distance" placeholder="10" min="0">
+        <button class="increment" onclick="incrementValue('distance')">+</button>
+      </div>
     </div>
 
     <!-- Grupo de input para Pace -->
     <div class="form-group">
       <label for="paceMinutes">Pace</label>
       <div class="input-wrapper">
+        <button class="decrement" onclick="decrementValue('paceMinutes')">-</button>
         <input type="number" id="paceMinutes" placeholder="30" min="0" max="59">
+        <button class="increment" onclick="incrementValue('paceMinutes')">+</button>
         <span class="suffix">min</span>
       </div>
       <div class="input-wrapper">
+        <button class="decrement" onclick="decrementValue('paceSeconds')">-</button>
         <input type="number" id="paceSeconds" placeholder="00" min="0" max="59">
+        <button class="increment" onclick="incrementValue('paceSeconds')">+</button>
         <span class="suffix">seg</span>
       </div>
     </div>
+
+
 
     <!-- Grupo de botões para calcular Pace e Tempo atualizado v1.2-->
     <div class="form-group-buttons">

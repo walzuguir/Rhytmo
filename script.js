@@ -101,3 +101,79 @@ function calculateTime() {
   ).padStart(2, "0")}:${String(totalSeconds).padStart(2, "0")}`;
   document.getElementById("totalTime").value = formattedTime;
 }
+
+
+//Funções de incremento e decremento para os inputs
+function incrementValue(id) {
+  const input = document.getElementById(id);
+  let currentValue = parseInt(input.value) || 0;
+
+  // Se for o campo de tempo, incrementa no formato de tempo
+  if (id === 'totalTime') {
+    let timeParts = input.value.split(":");
+    let hours = parseInt(timeParts[0] || 0);
+    let minutes = parseInt(timeParts[1] || 0);
+    let seconds = parseInt(timeParts[2] || 0);
+
+    // Incrementa em segundos ou minutos de acordo com a parte
+    if (seconds < 59) {
+      seconds++;
+    } else if (minutes < 59) {
+      minutes++;
+      seconds = 0;
+    } else {
+      hours++;
+      minutes = 0;
+      seconds = 0;
+    }
+
+    input.value = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  } else if (id === 'distance') {
+    const max = input.max ? parseInt(input.max) : Infinity;
+    if (currentValue < max) {
+      input.value = currentValue + 1;
+    }
+  } else {
+    const max = input.max ? parseInt(input.max) : Infinity;
+    if (currentValue < max) {
+      input.value = currentValue + 1;
+    }
+  }
+}
+
+function decrementValue(id) {
+  const input = document.getElementById(id);
+  let currentValue = parseInt(input.value) || 0;
+
+  // Se for o campo de tempo, decrementa no formato de tempo
+  if (id === 'totalTime') {
+    let timeParts = input.value.split(":");
+    let hours = parseInt(timeParts[0] || 0);
+    let minutes = parseInt(timeParts[1] || 0);
+    let seconds = parseInt(timeParts[2] || 0);
+
+    // Decrementa em segundos ou minutos de acordo com a parte
+    if (seconds > 0) {
+      seconds--;
+    } else if (minutes > 0) {
+      minutes--;
+      seconds = 59;
+    } else if (hours > 0) {
+      hours--;
+      minutes = 59;
+      seconds = 59;
+    }
+
+    input.value = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  } else if (id === 'distance') {
+    const min = input.min ? parseInt(input.min) : -Infinity;
+    if (currentValue > min) {
+      input.value = currentValue - 1;
+    }
+  } else {
+    const min = input.min ? parseInt(input.min) : -Infinity;
+    if (currentValue > min) {
+      input.value = currentValue - 1;
+    }
+  }
+}

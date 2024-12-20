@@ -126,6 +126,7 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
   color: var(--text-color);
+  user-select: none;
 }
 
 input {
@@ -137,6 +138,20 @@ input {
   transition: all 0.3s ease;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-number-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
 input:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 5px var(--primary-color);
@@ -144,28 +159,38 @@ input:focus {
 }
 
 .input-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 48%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-wrapper button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.input-wrapper button:hover {
+  background-color: #0056b3;
 }
 
 .input-wrapper input {
-  width: 100%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  font-size: 1rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
+  width: calc(200% - 70px);
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .input-wrapper .suffix {
-  position: absolute;
-  top: 50%;
-  right: 35px;
-  /* Posição do sufixo à direita */
-  transform: translateY(-50%);
-  color: #888;
-  font-size: 0.9rem;
+  font-size: 14px;
+  color: #555;
 }
 
 .input-wrapper input:focus+.suffix {
@@ -228,7 +253,6 @@ button:focus {
   border-radius: var(--radius);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   min-height: 50px;
-  /* Ajuste conforme necessário */
 }
 
 #result:hover {
