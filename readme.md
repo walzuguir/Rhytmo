@@ -1,5 +1,5 @@
-# RhythmPro: Calculadora de Pace & Tempo de Corrida
-Este é um projeto desenvolvido para ajudar corredores a calcular o tempo de corrida ou o ritmo com base na distância e no tempo percorrido. A interface é simples e intuitiva, permitindo que os usuários planejem seus treinos e competições de forma eficiente.
+# RhythmPro: Calculadora de Pace e Tempo de Corrida
+Um projeto em desenvolvimento que tem o intuito de calcular o tempo de pace com base no tempo e distância e também de calcular o tempo com base no pace e na distância.
 
 ## Objetivo do Projeto
 O objetivo deste projeto é oferecer uma ferramenta prática e acessível para corredores, com funcionalidades que incluem:
@@ -27,25 +27,3 @@ Clique em "Calcular Pace" para obter o tempo médio por quilômetro.
 Insira o pace desejado (minutos e segundos por quilômetro).
 Informe a distância da corrida.
 Clique em "Calcular Tempo" para obter o tempo total necessário.
-
-## **Contribuições**
-Se você deseja contribuir para o desenvolvimento do projeto, siga os passos abaixo:
-
-Realize o fork deste repositório.
-Crie uma nova branch para sua funcionalidade:
-bash
-Copy code
-git checkout -b minha-feature
-Faça as alterações desejadas no código.
-Faça o commit das alterações:
-bash
-Copy code
-git commit -m 'Adiciona nova funcionalidade'
-Envie para sua branch:
-bash
-Copy code
-git push origin minha-feature
-Abra um pull request para o repositório principal.
-
-## Licença
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
