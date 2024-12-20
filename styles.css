@@ -1,232 +1,243 @@
 /* Variáveis globais */
 :root {
-    --primary-color: #3f51b5;
-    --secondary-color: #4caf50;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --border-color: #ccc;
-    --font-size: 16px;
-    --radius: 8px;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --padding: 20px;
-  }
-  
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Estilo base */
+  --primary-color: #3f51b5;
+  --secondary-color: #4caf50;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --border-color: #ccc;
+  --font-size: 16px;
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --padding: 20px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  /* Cor de fundo mais suave */
+  color: var(--primary-color);
+  font-size: var(--font-size);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f8f8; /* Cor de fundo mais suave */
-    color: var(--primary-color);
-    font-size: var(--font-size);
+    font-size: 14px;
   }
-  /* Responsividade */
-  @media (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-  }
-  
-  /* Container */
-  .container {
-    background: #fff;
-    padding: var(--padding);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    border: 1px solid #ddd; /* Borda suave para o container */
-  }
-  
-  /* Estilo do Título */
-  .title {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--primary-color);
-    position: relative;
-    pointer-events: none;
-    user-select: none;
-    text-transform: uppercase; /* Adiciona um toque mais moderno */
-    letter-spacing: 1px; /* Aumenta o espaço entre as letras */
-    transition: all 0.3s ease; /* Suaviza a transição */
-    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
-  }
-  
-  .title:hover {
-    color: var(--secondary-color); /* Mudança de cor no hover */
-    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
-  }
-  
-  
-  .title span {
-    color: var(--secondary-color);
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Efeito Subtítulo */
-  .title::after {
-    content: "Encontre o ritmo perfeito!";
-    font-size: 1rem;
-    color: var(--text-color);
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    text-align: center;
-    font-style: italic;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 10px 0;
-    border-bottom: 2px solid var(--primary-color);
-    user-select: none;
-  }
-  
-  h2:hover {
-    color: var(--secondary-color); /* Mudança de cor no hover */
-    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
-  }
+}
 
-  /* Formulário */
-  .form {
-    margin: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--text-color);
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--primary-color);
-    outline: none;
-  }
-  
-  .input-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 48%;
-  }
-  
-  .input-wrapper input {
-    width: 100%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border-color);
-  }
-  
-  .input-wrapper .suffix {
-    position: absolute;
-    top: 50%;
-    right: 35px; /* Posição do sufixo à direita */
-    transform: translateY(-50%);
-    color: #888;
-    font-size: 0.9rem;
-  }
-  
-  .input-wrapper input:focus + .suffix {
-    color: var(--primary-color);
-  }
-  
-  .form-group-buttons {
-    display: flex;
-    justify-content: space-around;
-    position: relative; /* Impede que o layout dos botões seja alterado pelo resultado */
-    z-index: 1;
-  }
+/* Container */
+.container {
+  background: #fff;
+  padding: var(--padding);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #ddd;
+  /* Borda suave para o container */
+}
 
-  button {
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    font-weight: bold;
-    width: 120px;
-  }
-  
-  button:hover {
-    background-color: #003366;
-    transform: scale(1.05);
-  }
-  
-  button:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
-  }
-  
-  .form__button--primary {
-    background-color: var(--secondary-color);
-  }
-  
-  .form__button--primary:hover {
-    background-color: #388e3c;
-    transform: scale(1.05);
-  }
-  
-  .form__button--primary:focus {
-    box-shadow: 0 0 10px rgba(56, 142, 60, 0.8);
-  }
-  
-  
-  #result {
-    margin-top: 20px;
-    font-size: 20px;
-    color: var(--text-color);
-    text-align: center;
-    font-weight: bold;
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 50px; /* Ajuste conforme necessário */
-  }
-  
-  #result:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transform: scale(1.03);
-  }
-  
-  #result:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
-  }
-  
-  
-  
+/* Estilo do Título */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+  text-transform: uppercase;
+  /* Adiciona um toque mais moderno */
+  letter-spacing: 1px;
+  /* Aumenta o espaço entre as letras */
+  transition: all 0.3s ease;
+  /* Suaviza a transição */
+  transition: box-shadow 0.3s ease;
+  /* Transição suave para a sombra */
+}
+
+.title:hover {
+  color: var(--secondary-color);
+  /* Mudança de cor no hover */
+  text-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  /* Aumenta o efeito de sombra */
+}
+
+
+.title span {
+  color: var(--secondary-color);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito Subtítulo */
+.title::after {
+  content: "Encontre o ritmo perfeito!";
+  font-size: 1rem;
+  color: var(--text-color);
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--primary-color);
+  user-select: none;
+}
+
+h2:hover {
+  color: var(--secondary-color);
+  /* Mudança de cor no hover */
+  text-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  /* Aumenta o efeito de sombra */
+}
+
+/* Formulário */
+.form {
+  margin: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+  outline: none;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+.input-wrapper .suffix {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  /* Posição do sufixo à direita */
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.input-wrapper input:focus+.suffix {
+  color: var(--primary-color);
+}
+
+.form-group-buttons {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  /* Impede que o layout dos botões seja alterado pelo resultado */
+  z-index: 1;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  width: 120px;
+}
+
+button:hover {
+  background-color: #003366;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
+
+.form__button--primary {
+  background-color: var(--secondary-color);
+}
+
+.form__button--primary:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.form__button--primary:focus {
+  box-shadow: 0 0 10px rgba(56, 142, 60, 0.8);
+}
+
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--text-color);
+  text-align: center;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 50px;
+  /* Ajuste conforme necessário */
+}
+
+#result:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+}
+
+#result:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+}

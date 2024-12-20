@@ -22,86 +22,82 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   totalTimeInput.addEventListener("keydown", (event) => {
-    // Permitir apenas números e teclas de controle
+    // Permitir apenas números e teclas de controle v1.2
     const allowedKeys = ["Backspace", "ArrowLeft", "ArrowRight", "Tab"];
     if (!/\d/.test(event.key) && !allowedKeys.includes(event.key)) {
       event.preventDefault();
     }
   });
-
-  // Cálculo de Pace
-  document.getElementById("calculatePace").addEventListener("click", function () {
-    const timeParts = totalTimeInput.value.split(":");
-
-    // Verifica se algum valor de tempo está vazio
-    if (timeParts.length < 3 || timeParts.some(part => part === "")) {
-      alert("Por favor, insira um tempo válido no formato HH:MM:SS.");
-      return;
-    }
-
-    const hours = parseInt(timeParts[0]) || 0;
-    const minutes = parseInt(timeParts[1]) || 0;
-    const seconds = parseInt(timeParts[2]) || 0;
-
-    const distance = parseFloat(document.getElementById("distance").value) || 0;
-
-    // Verificação de valores
-    console.log("Total Time:", totalTimeInput.value);
-    console.log("Distance:", distance);
-
-    if (distance <= 0) {
-      alert("Por favor, insira uma distância válida maior que zero.");
-      return;
-    }
-
-    const totalTimeInSeconds = hours * 3600 + minutes * 60 + seconds;
-    const paceInSeconds = totalTimeInSeconds / distance;
-    const paceMinutes = Math.floor(paceInSeconds / 60);
-    const paceSeconds = Math.round(paceInSeconds % 60);
-
-    const result = document.getElementById("result");
-    result.innerHTML = `O pace é: ${paceMinutes}:${String(paceSeconds).padStart(2, '0')} min/km`;
-
-    document.getElementById("paceMinutes").value = paceMinutes;
-    document.getElementById("paceSeconds").value = paceSeconds;
-  });
-
-  // Cálculo de Tempo Total
-  document.getElementById("calculateTime").addEventListener("click", function () {
-    const paceMinutes = parseInt(document.getElementById("paceMinutes").value) || 0;
-    const paceSeconds = parseInt(document.getElementById("paceSeconds").value) || 0;
-    const distance = parseFloat(document.getElementById("distance").value) || 0;
-
-  // Validação do tempo
-  if (paceMinutes === 0 && paceSeconds === 0) {
-  alert("Por favor, insira um pace válido.");
-  return;
-    }
-
-    // Verificar valores
-    console.log("Pace Minutes:", paceMinutes);
-    console.log("Pace Seconds:", paceSeconds);
-    console.log("Distance:", distance);
-
-    if (distance <= 0) {
-      alert("Por favor, insira uma distância válida maior que zero.");
-      return;
-    }
-
-    const paceInSeconds = paceMinutes * 60 + paceSeconds;
-    const totalTimeInSeconds = paceInSeconds * distance;
-    const totalHours = Math.floor(totalTimeInSeconds / 3600);
-    const totalMinutes = Math.floor((totalTimeInSeconds % 3600) / 60);
-    const totalSeconds = Math.round(totalTimeInSeconds % 60);
-
-    const result = document.getElementById("result");
-    // Exibindo o tempo em hh:mm:ss format
-    result.innerHTML = `O tempo total é: ${String(totalHours).padStart(2, '0')}:${String(totalMinutes).padStart(2, '0')}:${String(totalSeconds).padStart(2, '0')}`;
-
-
-    const formattedTime = `${String(totalHours).padStart(2, "0")}:${String(
-      totalMinutes
-    ).padStart(2, "0")}:${String(totalSeconds).padStart(2, "0")}`;
-    totalTimeInput.value = formattedTime;
-  });
 });
+
+// Função para calcular o Pace atualizada para v1.2
+function calculatePace() {
+  const totalTimeInput = document.getElementById("totalTime");
+  const timeParts = totalTimeInput.value.split(":");
+
+  // Verifica se algum valor de tempo está vazio atualizado v1.2
+  if (timeParts.length < 3 || timeParts.some((part) => part === "")) {
+    alert("Por favor, insira um tempo válido no formato HH:MM:SS.");
+    return;
+  }
+
+  // Função criada para lógica da distancia atualizado v1.2
+  const hours = parseInt(timeParts[0]) || 0;
+  const minutes = parseInt(timeParts[1]) || 0;
+  const seconds = parseInt(timeParts[2]) || 0;
+
+  const distance = parseFloat(document.getElementById("distance").value) || 0;
+
+  // Verifica se algum valor do campo distancia está vazio atualizado v1.2
+  if (distance <= 0) {
+    alert("Por favor, insira uma distância válida maior que zero.");
+    return;
+  }
+
+  // Verifica se algum valor de tempo está vazio atualizado v1.2
+  const totalTimeInSeconds = hours * 3600 + minutes * 60 + seconds;
+  const paceInSeconds = totalTimeInSeconds / distance;
+  const paceMinutes = Math.floor(paceInSeconds / 60);
+  const paceSeconds = Math.round(paceInSeconds % 60);
+
+  const result = document.getElementById("result");
+  result.innerHTML = `O pace é: ${paceMinutes}:${String(paceSeconds).padStart(2, "0")} min/km`;
+
+  document.getElementById("paceMinutes").value = paceMinutes;
+  document.getElementById("paceSeconds").value = paceSeconds;
+}
+
+// Função para calcular o Tempo Total atualizado v1.2
+function calculateTime() {
+  const paceMinutes = parseInt(document.getElementById("paceMinutes").value) || 0;
+  const paceSeconds = parseInt(document.getElementById("paceSeconds").value) || 0;
+  const distance = parseFloat(document.getElementById("distance").value) || 0;
+
+  if (paceMinutes === 0 && paceSeconds === 0) {
+    alert("Por favor, insira um pace válido.");
+    return;
+  }
+
+  if (distance <= 0) {
+    alert("Por favor, insira uma distância válida maior que zero.");
+    return;
+  }
+
+  // Para calcular o resultado v1.2
+  const paceInSeconds = paceMinutes * 60 + paceSeconds;
+  const totalTimeInSeconds = paceInSeconds * distance;
+  const totalHours = Math.floor(totalTimeInSeconds / 3600);
+  const totalMinutes = Math.floor((totalTimeInSeconds % 3600) / 60);
+  const totalSeconds = Math.round(totalTimeInSeconds % 60);
+
+  // InnerHTML do resultado v1.2
+  const result = document.getElementById("result");
+  result.innerHTML = `O tempo total é: ${String(totalHours).padStart(2, "0")}:${String(
+    totalMinutes
+  ).padStart(2, "0")}:${String(totalSeconds).padStart(2, "0")}`;
+
+  const formattedTime = `${String(totalHours).padStart(2, "0")}:${String(
+    totalMinutes
+  ).padStart(2, "0")}:${String(totalSeconds).padStart(2, "0")}`;
+  document.getElementById("totalTime").value = formattedTime;
+}
